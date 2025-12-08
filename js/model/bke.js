@@ -8,3 +8,11 @@ function setSelectedWord() {
     selectedWord = words[Math.floor(Math.random() * words.length)];
 }
 
+const fiches = ["","","","","","","","",""];
+
+
+function setFiche(id,fiche) {
+
+    fiches[id]=fiche;
+
+}

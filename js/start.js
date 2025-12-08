@@ -7,7 +7,7 @@ window.onload=start;
 function start()
 {
     //koppel de eventhandler aan de letters
-    bindButtons();
+    bindCells();
 }
 
 
