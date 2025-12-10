@@ -16,3 +16,27 @@ function setFiche(id,fiche) {
     fiches[id]=fiche;
 
 }
+
+function isFicheAllowed(id) {
+
+if (fiches[id]===""){
+    return true;
+} else {
+
+    return false;
+}
+
+
+}
+
+
+function changeActiveSymbol() {
+
+if(changeActiveSymbol==="X"){
+    ActiveSymbol="0"
+} else {
+
+    ActiveSymbol="X"
+}
+
+}
