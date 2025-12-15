@@ -7,17 +7,24 @@
   margin: 20px auto;
 }
 
-
 .tower {
-  grid-row: 1 / span 4;
+  grid-row: 1 / 4;
   border: 2px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header{
 
-    text-align: center;
+.left-tower {
+  grid-column: 1;
+}
+
+.right-tower {
+  grid-column: 5;
+}
+
+header {
+  text-align: center;
 }
 
 .boxdisplay div {
@@ -53,21 +60,16 @@ header{
 
 .player {
   display: flex;
-    flex-direction: column;
-
+  flex-direction: column;
 }
 
-p{
-
-text-align: center;
+p {
+  text-align: center;
 }
-
 
 .flexbuttons {
-
-display: flex;
-flex-direction: row;
-gap: 100px;
-justify-content: center;
-
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  justify-content: center;
 }
