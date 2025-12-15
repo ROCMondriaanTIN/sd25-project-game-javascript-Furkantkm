@@ -1,10 +1,19 @@
 .boxdisplay {
   display: grid;
-  grid-template-columns: repeat(3, 100px);
+  grid-template-columns: 120px repeat(3, 100px) 120px;
   grid-template-rows: repeat(3, 100px);
   width: 300px;
   height: 300px;
   margin: 20px auto;
+}
+
+
+.tower {
+  grid-row: 1 / span 4;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header{
 
@@ -29,4 +38,36 @@ header{
 
 .box7, .box8, .box9 {
   border-bottom: none;
+}
+
+.flexboxplayers {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.flexboxplayers form {
+  display: flex;
+  gap: 100px;
+}
+
+.player {
+  display: flex;
+    flex-direction: column;
+
+}
+
+p{
+
+text-align: center;
+}
+
+
+.flexbuttons {
+
+display: flex;
+flex-direction: row;
+gap: 100px;
+justify-content: center;
+
 }

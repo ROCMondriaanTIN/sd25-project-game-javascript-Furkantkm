@@ -16,3 +16,6 @@ function setFiche(id,fiche) {
     fiches[id]=fiche;
 
 }
+
+const speler2 = document.querySelector("#player1");
+const speler1 = document.querySelector("#player2");
