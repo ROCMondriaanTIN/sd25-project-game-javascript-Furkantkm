@@ -1,21 +1,15 @@
-'use strict'
-//hier komt de spelletjes data, hieronder staat een voorbeeld
+'use strict';
+let speler1Naam = "Speler 1";
+let speler2Naam = "Speler 2";
 
-const words=['rood', 'wit','blauw','geel','violet','groen','roze'];
-let selectedWord;
-
-function setSelectedWord() {
-    selectedWord = words[Math.floor(Math.random() * words.length)];
-}
-
+// speldata
 const fiches = ["","","","","","","","",""];
+let currentPlayer = "X";
 
-
-function setFiche(id,fiche) {
-
-    fiches[id]=fiche;
-
+function isFicheAllowed(id) {
+    return fiches[id] === "";
 }
 
-const speler2 = document.querySelector("#player1");
-const speler1 = document.querySelector("#player2");
+function setFiche(id, fiche) {
+    fiches[id] = fiche;
+}
