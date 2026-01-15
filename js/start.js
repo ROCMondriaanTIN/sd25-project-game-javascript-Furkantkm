@@ -1,14 +1,15 @@
-"use strict"
-//het opstart bestand, de functie start wordt als eerste uitgevoerd
-//met de voorbeeld code kan je de geklite letters zien in je console!
-window.onload=start;
+'use strict';
 
-
-function start()
-{
-    //koppel de eventhandler aan de letters
+// start.js: alleen opstarten
+window.onload = function() {
+    // koppel vakjes aan klik events
     bindCells();
-}
 
+    // koppel knoppen
+    document.querySelector("#startBtn").addEventListener("click", startSpel);
+    document.querySelector("#restartBtn").addEventListener("click", restartSpel);
+    document.querySelector("#nextRoundBtn").addEventListener("click", nextRound)
 
-updateSpelersNamen()
+    // toon meteen de eerste beurt
+    updateBeurt();
+};

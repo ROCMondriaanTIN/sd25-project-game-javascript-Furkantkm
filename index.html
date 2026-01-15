@@ -10,7 +10,7 @@
 
   
   <header>BKE</header>
-  <p>Ronde: <span>1/3</span></p>
+<p>Ronde: <span id="rondeDisplay">1/3</span></p>
 
 
   <div class="flexboxplayers">
@@ -27,7 +27,7 @@
   </form>
 
 </div>
-  <p>Beurt: <span id="beurtDisplay">Speler 1</span></p>
+<p>Beurt: <span id="beurtDisplay">Speler 1</span></p>
 
   <div class="boxdisplay">
       <aside class="tower left-tower">O <p1>score: <span>0</span></p1></aside>
@@ -49,9 +49,9 @@
   </div>
 
   <div class="flexbuttons">
-  <button>Restart</button>
-  <button>Start</button>
-  <button>Volgende Ronde</button>
+  <button id="restartBtn">Restart</button>
+<button id="startBtn">Start</button>
+  <button id="nextRoundBtn"> volgende ronde </button> 
 
 </div>
 <script src="/js/model/bke.js" defer></script>
