@@ -9,42 +9,47 @@ function handleLetterClick(event) {
 
     if (!spelActief) {
         alert("Klik eerst op Start en vul beide namen in!");
+    } else {
+        if (fiches[id] === "") {
+            setFiche(id, currentPlayer);
+              
+showFiches();
+        
+
+
+
+
+
+
+        // Check winst
+        if (checkWin(currentPlayer)) {
+            //HIER OOK DE TRADITIONELE IF STATEMENT
+            alert(`${currentPlayer === "X" ? speler1Naam : speler2Naam} heeft gewonnen!`);
+            spelActief = false; // spel pauzeert
+            if (currentPlayer === "X") {
+                scoreX++;
+            } else if (currentPlayer === "O") {
+                scoreO++;
+
+            } updateScore()
+
+        }
+
+
+        // Check gelijkspel
+        if (checkDraw()) {
+            alert("Gelijkspel!");
+            spelActief = false;
+            return;
+        }
+  currentPlayer = currentPlayer === "X" ? "O" : "X";
+  updateBeurt();
+
+    }
         
     }
-
-
-    setFiche(id, currentPlayer);
-    showFiches();
-
-    // Check winst
-    if (checkWin(currentPlayer)) {
-        //HIER OOK DE TRADITIONELE IF STATEMENT
-        alert(`${currentPlayer === "X" ? speler1Naam : speler2Naam} heeft gewonnen!`);
-        spelActief = false; // spel pauzeert
-if (currentPlayer === "X") {
-    scoreX++;
-} else if (currentPlayer === "O")
-    {
-    scoreO++;
-
-}      updateScore()
-        return;
-
-    }
-    
-
-    // Check gelijkspel
-    if (checkDraw()) {
-        alert("Gelijkspel!");
-        spelActief = false;
-        return;
-    }
-
-    // Wissel speler
-    //HIER OOK IF STATMENT
-    currentPlayer = currentPlayer === "X" ? "O" : "X";
-    updateBeurt();
 }
+
 
 // --- Start-knop ---
 function startSpel() {
@@ -89,11 +94,10 @@ function restartSpel() {
 // --- Volgende ronde ---
 function nextRound() {
     if (!speler1Naam || !speler2Naam || speler1Naam === "Speler 1" || speler2Naam === "Speler 2") {
-        alert("Het spel is nog niet gestart! Vul eerst de namen in en klik op Start.");
-        return;
+        
     }
-    
 
+spelActief = true
     // maximum aantal rondes bereikt
     if (ronde >= maxRonde) {
         // Bepaal winnaar van het hele spel

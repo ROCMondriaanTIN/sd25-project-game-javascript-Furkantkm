@@ -6,17 +6,19 @@ let currentPlayer = "X";
 let spelActief = false;
 
 
+
+
+
 // speldata
 const fiches = ["","","","","","","","",""];
 
-// check of vakje leeg is
-function isFicheAllowed(id) {
-    return fiches[id] === "";
-}
+
+
 
 // zet fiche
 function setFiche(id, fiche) {
     fiches[id] = fiche;
+    
 }
 
 // win combinaties
