@@ -1,10 +1,9 @@
 .boxdisplay {
-  display: grid;
-  grid-template-columns: 120px repeat(3, 100px) 120px;
-  grid-template-rows: repeat(3, 100px);
-  width: 300px;
-  height: 300px;
-  margin: 20px auto;
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr 1fr 150px;
+    grid-template-rows: repeat(3, 100px);
+    width: 50%;
+    margin: 0px auto;
 }
 
 .tower {
@@ -73,3 +72,26 @@ p {
   gap: 100px;
   justify-content: center;
 }
+body {
+
+  color: black;
+  background-color: rgb(60, 57, 57);
+}
+#nextRoundBtn {
+  background-color: #2196F3;
+  color: white;
+  padding: 2px;
+}#nextRoundBtn:hover {
+  background-color: #1e88e5;
+  transform: scale(1.05);
+}#startBtn {
+  background-color: #00ff5e;
+  color: white;}
+
+  #restartBtn:hover {
+  background-color: #ff0000;
+  transform: scale(1.05); }
+
+   #restartBtn {
+  background-color: #ff0000;
+  transform: scale(1.05); }

@@ -4,8 +4,7 @@ let speler1Naam = "Speler 1";
 let speler2Naam = "Speler 2";
 let currentPlayer = "X";
 let spelActief = false;
-let scoreO = 0;
-let scoreX = 0;
+
 
 // speldata
 const fiches = ["","","","","","","","",""];
@@ -34,15 +33,33 @@ const winCombinaties = [
 
 // check winst
 function checkWin(player) {
-    return winCombinaties.some(combi =>
-        combi.every(index => fiches[index] === player)
-    );
+    for (let i = 0; i < winCombinaties.length; i++) {
+        const combi = winCombinaties[i];
+
+        if (
+            fiches[combi[0]] === player &&
+            fiches[combi[1]] === player &&
+            fiches[combi[2]] === player
+        ) {
+            return true;
+        }
+    }
+    return false;
 }
+
 
 // check gelijkspel
 function checkDraw() {
-    return fiches.every(fiche => fiche !== ""); // aangepast van null naar ""
+    for (let i = 0; i < fiches.length; i++) {
+        if (fiches[i] === "") {
+            return false; // er is nog een leeg vakje
+        }
+    }
+    return true; // geen lege vakjes → gelijkspel
 }
+
+
+
 function resetGame() {
     for (let i = 0; i < fiches.length; i++) {
         fiches[i] = ""; // alle vakjes leeg
