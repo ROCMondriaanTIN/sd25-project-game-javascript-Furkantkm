@@ -8,7 +8,7 @@ function handleLetterClick(event) {
     const id = parseInt(event.target.id);
 
     if (!spelActief) {
-        alert("Klik eerst op Start en vul beide namen in!");
+        showMessage("vul eerst Beide namen in en klik dan op start !");
     } else {
         if (fiches[id] === "") {
             setFiche(id, currentPlayer);
@@ -24,7 +24,7 @@ showFiches();
         // Check winst
         if (checkWin(currentPlayer)) {
             //HIER OOK DE TRADITIONELE IF STATEMENT
-            alert(`${currentPlayer === "X" ? speler1Naam : speler2Naam} heeft gewonnen!`);
+            showMessage(`${currentPlayer === "X" ? speler1Naam : speler2Naam} heeft gewonnen!`);
             spelActief = false; // spel pauzeert
             if (currentPlayer === "X") {
                 scoreX++;
@@ -38,7 +38,7 @@ showFiches();
 
         // Check gelijkspel
         if (checkDraw()) {
-            alert("Gelijkspel!");
+            showMessage("Gelijkspel!");
             spelActief = false;
             return;
         }
@@ -58,7 +58,7 @@ function startSpel() {
 
     //OR-statement. Als de ene true is dan wordt de statement uitgevoerd. 
     if (play1 === "" || play2 === "") {
-        alert("Vul eerst beide namen in!");
+        showMessage("Vul eerst beide namen in!");
         return;
     }
 
@@ -102,11 +102,14 @@ spelActief = true
     if (ronde >= maxRonde) {
         // Bepaal winnaar van het hele spel
         if (scoreX > scoreO) {
-            alert(`${speler1Naam} heeft het spel gewonnen met ${scoreX} rondes!`);
+          //  alert(`${speler1Naam} heeft het spel gewonnen met ${scoreX} rondes!`);
+
+          showMessage(`${speler1Naam} heeft het spel gewonnen met ${scoreX} rondes!`);
+
         } else if (scoreO > scoreX) {
-            alert(`${speler2Naam} heeft het spel gewonnen met ${scoreO} rondes!`);
+            showMessage(`${speler2Naam} heeft het spel gewonnen met ${scoreO} rondes!`);
         } else {
-            alert(`Het spel is gelijkspel! Beide spelers hebben ${scoreX} rondes gewonnen.`);
+            showMessage(`Het spel is gelijkspel! Beide spelers hebben ${scoreX} rondes gewonnen.`);
         }
         return;
     }
@@ -117,5 +120,5 @@ spelActief = true
     showFiches();
     updateBeurt();
     updateRondeDisplay();
-    alert(`Ronde ${ronde} gestart!`);
+    showMessage(`Ronde ${ronde} gestart!`);
 }

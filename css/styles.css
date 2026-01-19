@@ -74,7 +74,7 @@ p {
 }
 body {
 
-  color: black;
+  color: rgb(239, 239, 239);
   background-color: rgb(60, 57, 57);
 }
 #nextRoundBtn {
@@ -89,9 +89,22 @@ body {
   color: white;}
 
   #restartBtn:hover {
-  background-color: #ff0000;
+  background-color: #ffffff;
   transform: scale(1.05); }
 
    #restartBtn {
   background-color: #ff0000;
   transform: scale(1.05); }
+
+  .message {
+
+margin: 10px auto;
+border-radius: rgb(250, 243, 243);
+border-width: thin;
+border-style: solid;
+padding: 10px;
+color: #ffffff;
+text-align: center;
+width: 150px;
+
+  }

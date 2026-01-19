@@ -7,8 +7,6 @@ let spelActief = false;
 
 
 
-
-
 // speldata
 const fiches = ["","","","","","","","",""];
 
@@ -33,21 +31,21 @@ const winCombinaties = [
     [2,4,6]
 ];
 
-// check winst
-function checkWin(player) {
-    for (let i = 0; i < winCombinaties.length; i++) {
-        const combi = winCombinaties[i];
+    // check winst
+    function checkWin(player) {
+        for (let i = 0; i < winCombinaties.length; i++) {
+            const combi = winCombinaties[i];
 
-        if (
-            fiches[combi[0]] === player &&
-            fiches[combi[1]] === player &&
-            fiches[combi[2]] === player
-        ) {
-            return true;
+            if (
+                fiches[combi[0]] === player &&
+                fiches[combi[1]] === player &&
+                fiches[combi[2]] === player
+            ) {
+                return true;
+            }
         }
+        return false;
     }
-    return false;
-}
 
 
 // check gelijkspel

@@ -58,4 +58,9 @@ function updateScore() {
     document.querySelector("#scoreX").textContent = scoreX;
     document.querySelector("#scoreO").textContent = scoreO;
 }
+function showMessage (m) {
 
+let announceMessage = document.querySelector(".message");
+announceMessage.innerHTML = m;
+
+}
