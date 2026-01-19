@@ -22,7 +22,8 @@ function showFiches() {
 function updateBeurt() {
     const beurtDisplay = document.querySelector("#beurtDisplay");
     //AANPASSEN NAAR EEN NORMALE
-    beurtDisplay.textContent = currentPlayer === "X" ? speler1Naam : speler2Naam;
+    //beurtDisplay.textContent = currentPlayer === "X" ? speler1Naam : speler2Naam;
+    showMessage(currentPlayer === "X" ? speler1Naam : speler2Naam);
 }
 
 // Update spelersnamen vanuit input
