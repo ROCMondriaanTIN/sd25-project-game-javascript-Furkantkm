@@ -102,14 +102,14 @@ spelActief = true
     if (ronde >= maxRonde) {
         // Bepaal winnaar van het hele spel
         if (scoreX > scoreO) {
-          //  alert(`${speler1Naam} heeft het spel gewonnen met ${scoreX} rondes!`);
-
+           // alert(`${speler1Naam} heeft het spel gewonnen met ${scoreX} rondes!`);
+          
           showMessage(`${speler1Naam} heeft het spel gewonnen met ${scoreX} rondes!`);
 
         } else if (scoreO > scoreX) {
             showMessage(`${speler2Naam} heeft het spel gewonnen met ${scoreO} rondes!`);
         } else {
-            showMessage(`Het spel is gelijkspel! Beide spelers hebben ${scoreX} rondes gewonnen.`);
+            showMessage(`Het spel is gelijkspel! Beide spelers hebben ${scoreX} rondes gewonnen`);
         }
         return;
     }
